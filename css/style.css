@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#5f2c82), to(#49a09d));
+  background: linear-gradient(90deg, #5f2c82, #49a09d);
+}
+
+#active path {
+  fill: crimson;
+}
+
+.background {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.background .bg {
+  width: 100%;
+}
+
+.background .name-box {
+  width: 680px;
+  position: absolute;
+  top: 45%;
+}
+
+.background .mount-box {
+  width: 200px;
+  position: absolute;
+  left: 40%;
+  top: 100px;
+}
+
+.background .oval-box {
+  width: 200px;
+  position: relative;
+  top: 20px;
+  left: 5%;
+}
+
+.background .team-box {
+  width: 150px;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+}
+
+.background .traingle-box {
+  width: 300px;
+  position: relative;
+  top: 50px;
+  left: 40%;
+}
+
+.background .insta-box {
+  width: 200px;
+  position: absolute;
+  top: 50px;
+  left: 70%;
+}
+
+.background #oval path, .background #mount path, .background #team path, .background #traingle path, .background #insta path {
+  fill: transparent;
+  stroke-width: 2;
+  stroke: lawngreen;
+  -webkit-animation: oval 8s infinite ease-in-out;
+          animation: oval 8s infinite ease-in-out;
+  opacity: .4;
+}
+
+.background #mount path {
+  stroke: gold;
+  stroke-width: 10;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+}
+
+.background #team path {
+  stroke: #fff;
+  stroke-width: 8;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+.background #traingle path {
+  stroke: crimson;
+  stroke-width: 10;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.background #insta path {
+  stroke: lightblue;
+  stroke-width: 10;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+@-webkit-keyframes oval {
+  0% {
+    stroke-dasharray: 200% 0%;
+  }
+  50% {
+    stroke-dasharray: 0% 100%;
+  }
+  100% {
+    stroke-dasharray: 50% 0%;
+  }
+}
+
+@keyframes oval {
+  0% {
+    stroke-dasharray: 200% 0%;
+  }
+  50% {
+    stroke-dasharray: 0% 100%;
+  }
+  100% {
+    stroke-dasharray: 50% 0%;
+  }
+}
+
+.name text {
+  stroke: gold;
+  font-size: 100px;
+  font-weight: 700;
+  stroke-width: 5;
+  -webkit-animation: textAnimate 10s infinite ease-in-out;
+          animation: textAnimate 10s infinite ease-in-out;
+  font-family: 'Rubik',sans-serif;
+}
+
+#more {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 2.5rem;
+  letter-spacing: .5rem;
+  font-family: 'Rubik',sans-serif;
+}
+
+@-webkit-keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke: #fff;
+  }
+  50% {
+    stroke-dasharray: 150% 0%;
+    stroke: gold;
+  }
+  100% {
+    stroke-dasharray: 0% 10%;
+    stroke: cyan;
+  }
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke: #fff;
+  }
+  50% {
+    stroke-dasharray: 150% 0%;
+    stroke: gold;
+  }
+  100% {
+    stroke-dasharray: 0% 10%;
+    stroke: cyan;
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-left: 1px solid gold;
+  width: 90px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0 2rem 0;
+}
+
+.home-d {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.links, .login {
+  width: 50px;
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+}
+
+.links svg {
+  margin: 1rem 0;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: .8rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.links .icon path {
+  fill: transparent;
+  stroke-width: 8;
+  stroke: white;
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+}
+
+.links .videos path {
+  stroke-width: 12;
+}
+
+.links .about-us path {
+  stroke-width: 10;
+}
+
+.log-in path {
+  fill: crimson;
+  stroke-width: 25;
+  stroke: #fff;
+}
+
+.icon:hover path {
+  -webkit-animation: animate 5s ease-in-out;
+          animation: animate 5s ease-in-out;
+  stroke: cyan;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    stroke-dasharray: 150% 0%;
+    stroke: white;
+  }
+  50% {
+    stroke-dasharray: 0% 100%;
+    stroke: gold;
+  }
+  100% {
+    stroke-dasharray: 50% 0%;
+    stroke: cyan;
+  }
+}
+
+@keyframes animate {
+  0% {
+    stroke-dasharray: 150% 0%;
+    stroke: white;
+  }
+  50% {
+    stroke-dasharray: 0% 100%;
+    stroke: gold;
+  }
+  100% {
+    stroke-dasharray: 50% 0%;
+    stroke: cyan;
+  }
+}
+/*# sourceMappingURL=style.css.map */
